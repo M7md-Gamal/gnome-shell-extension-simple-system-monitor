@@ -378,7 +378,8 @@ const Indicator = GObject.registerClass(
     class Indicator extends PanelMenu.Button {
         constructor(extension) {
             super();
-            this.extension = extension ?? Extension.lookupByUUID('ssm-gnome@lgiki.net');
+            this.extension =
+                extension ?? Extension.lookupByUUID('simple-system-monitor@m7md-gamal.github.io');
         }
 
         _init() {

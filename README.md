@@ -36,8 +36,8 @@ cd gnome-shell-extension-simple-system-monitor
 
 ### 3. Install and enable
 ```bash
-gnome-extensions install --force ssm-gnome@lgiki.net.shell-extension.zip
-gnome-extensions enable ssm-gnome@lgiki.net
+gnome-extensions install --force simple-system-monitor@m7md-gamal.github.io.shell-extension.zip
+gnome-extensions enable simple-system-monitor@m7md-gamal.github.io
 ```
 
 > **Note:** If installing on an active GNOME Shell session, you may need to log out and log back in (or toggle the extension in the **Extensions** app) for changes to take effect.
