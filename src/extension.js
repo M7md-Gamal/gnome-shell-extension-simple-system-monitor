@@ -330,25 +330,20 @@ const toDisplayString = (
     const displayItems = [];
     if (enable.isTemperatureEnable && temperature !== null) {
         displayItems.push(`${texts.temperatureText} ${temperature} °C`);
-
-        if (enable.isCpuUsageEnable && cpuUsage !== null) {
-            displayItems.push(
-                `${texts.cpuUsageText} ${formatUsageVal(
-                    cpuUsage,
-                    showExtraSpaces,
-                    showPercentSign,
-                )}`,
-            );
-        }
-        if (enable.isMemoryUsageEnable && memoryUsage !== null) {
-            displayItems.push(
-                `${texts.memoryUsageText} ${formatUsageVal(
-                    memoryUsage,
-                    showExtraSpaces,
-                    showPercentSign,
-                )}`,
-            );
-        }
+    }
+    if (enable.isCpuUsageEnable && cpuUsage !== null) {
+        displayItems.push(
+            `${texts.cpuUsageText} ${formatUsageVal(cpuUsage, showExtraSpaces, showPercentSign)}`,
+        );
+    }
+    if (enable.isMemoryUsageEnable && memoryUsage !== null) {
+        displayItems.push(
+            `${texts.memoryUsageText} ${formatUsageVal(
+                memoryUsage,
+                showExtraSpaces,
+                showPercentSign,
+            )}`,
+        );
     }
     if (enable.isSwapUsageEnable && swapUsage !== null) {
         displayItems.push(
