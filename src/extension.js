@@ -376,9 +376,9 @@ const toDisplayString = (
 
 const Indicator = GObject.registerClass(
     class Indicator extends PanelMenu.Button {
-        constructor() {
+        constructor(extension) {
             super();
-            this.extension = Extension.lookupByUUID('ssm-gnome@lgiki.net');
+            this.extension = extension ?? Extension.lookupByUUID('ssm-gnome@lgiki.net');
         }
 
         _init() {
@@ -460,7 +460,7 @@ export default class SSMExtension extends Extension {
 
         this._showFullNetSpeedUnit = this._prefs.SHOW_FULL_NET_SPEED_UNIT.get();
 
-        this._indicator = new Indicator();
+        this._indicator = new Indicator(this);
 
         this._update_text_style();
 
